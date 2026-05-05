@@ -1,17 +1,19 @@
 # Car Dealership Review System
 
-Full-stack web application for national U.S. car retailer - **IBM Full Stack Cloud Developer Capstone Project**
+**IBM Full Stack Software Developer Capstone Project**
 
-## Project Overview
-Responsive web app displaying dealership branches across USA states with user review system and sentiment analysis.
+## Repository Details
+- **Repository name**: `car-dealership-app`
+- **Project name**: `Car Dealership Review System`
+- **Student**: Panchami Panchami
 
-## Features
-- View all dealerships (`/djangoapp/fetchDealers`)
-- Filter by state (Kansas: `/djangoapp/dealers?state=KS`)
-- Dealer details + reviews (`/djangoapp/dealer/8`)
-- User authentication (`/api/login`, `/djangoapp/logout`)
-- Submit reviews with star ratings
-- AI sentiment analysis (`/analyze/Fantastic%20services`)
-- Car makes/models (`/djangoapp/get_cars`)
+## Project Description
+Full-stack Django/React application for national car dealership chain with:
+- Dealer directory (50+ locations)
+- User authentication & reviews  
+- Sentiment analysis API
+- State filtering (Kansas dealers)
+- Responsive UI with React frontend
 
-## Tech Stack
+## Live Deployment
+https://carsdealership-8000.theiadockernext-ab12cd34ef-labs-prod-theiak8s-xy789.proxy.cognitiveclass.ai/
