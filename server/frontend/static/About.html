@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>About Us - Cars Dealership</title>
-  <link rel="stylesheet" href="/static/css/style.css">  <!-- Fixed CSS path -->
+    <title>About Us - Car Dealership</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <!-- ADD NAVIGATION BAR (REQUIRED) -->
-  <nav class="navbar">
-    <a href="/">Home</a>
-    <a href="/about" class="active">About Us</a>  <!-- Active link -->
-    <a href="/contact">Contact</a>
-  </nav>
+    <!-- Navigation with About active -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Car Dealership</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/static/index.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/static/About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/static/Contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  <h1>About Us</h1>
-  <p>Welcome to Cars Dealership, a national car retailer in the U.S.</p>
-
-  <div class="team">
-    <div class="member">
-      <img src="https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?w=300" alt="John Doe">  <!-- Real image -->
-      <h3>John Doe</h3>
-      <p>Full-Stack Developer</p>
-      <p>Experience in Django and React. Manages backend APIs and frontend integration.</p>
-      <p>Email: <a href="mailto:johndoe@carsdealership.com">johndoe@carsdealership.com</a></p>
-    </div>
-    <div class="member">
-      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300" alt="Jane Smith">  <!-- Real image -->
-      <h3>Jane Smith</h3>
-      <p>Frontend Developer</p>
-      <p>Specialized in responsive UI design for dealership review system.</p>
-      <p>Email: <a href="mailto:janesmith@carsdealership.com">janesmith@carsdealership.com</a></p>
-    </div>
-  </div>
+    <!-- Team Section -->
+    <section class="team py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Team</h2>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 text-center">
+                    <img src="/static/images/team1.jpg" alt="John Smith" class="img-fluid rounded-circle mb-3" width="200">
+                    <h4>John Smith</h4>
+                    <p class="text-muted">General Manager</p>
+                    <p>20+ years in automotive sales and management</p>
+                    <a href="mailto:john.smith@dealership.com">john.smith@dealership.com</a>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="col-md-4 text-center">
+                    <img src="/static/images/team2.jpg" alt="Sarah Johnson" class="img-fluid rounded-circle mb-3" width="200">
+                    <h4>Sarah Johnson</h4>
+                    <p class="text-muted">Sales Director</p>
+                    <p>Specializes in luxury vehicle sales</p>
+                    <a href="mailto:sarah.j@dealership.com">sarah.j@dealership.com</a>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="col-md-4 text-center">
+                    <img src="/static/images/team3.jpg" alt="Mike Davis" class="img-fluid rounded-circle mb-3" width="200">
+                    <h4>Mike Davis</h4>
+                    <p class="text-muted">Service Manager</p>
+                    <p>Certified automotive technician</p>
+                    <a href="mailto:mike.davis@dealership.com">mike.davis@dealership.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
