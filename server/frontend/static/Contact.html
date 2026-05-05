@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us - Cars Dealership</title>
-  <link rel="stylesheet" href="/static/css/style.css">  <!-- FIXED: Correct Django static path -->
+    <title>Contact Us - Car Dealership Review System</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- ← FIXED CSS PATH -->
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About Us</a></li>
-      <li><a href="Contact.html" class="active">Contact Us</a></li>
-    </ul>
-  </nav>
+    <!-- FIXED NAVBAR - Contact Us ACTIVE -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/About.html">About</a></li>
+            <li><a href="/Contact.html" class="active">Contact Us</a></li>  <!-- ← ACTIVE -->
+        </ul>
+    </nav>
 
-  <h1>Contact Us</h1>
-  <p>Get in touch with Cars Dealership, a national car retailer in the U.S.</p>
+    <main>
+        <h1>Contact Us</h1>
+        
+        <!-- CONTACT DETAILS REQUIRED -->
+        <section class="contact-info">
+            <h2>Headquarters</h2>
+            <p><strong>Address:</strong> 123 Auto Drive, Detroit, MI 48201</p>
+            <p><strong>Phone:</strong> (800) 555-AUTO</p>
+            <p><strong>Email:</strong> info@cardealership.com</p>
+            <p><strong>Hours:</strong> Mon-Fri 9AM-8PM, Sat 10AM-6PM</p>
+        </section>
 
-  <div class="contact-info">
-    <h2>Corporate Office</h2>
-    <p>Address: 1234 Car Lane, Downtown, USA</p>
-    <p>Phone: +1 (555) 123-4567</p>
-    <p>Email: <a href="mailto:info@carsdealership.com">info@carsdealership.com</a></p>
-    <p>Customer Support: <a href="mailto:support@carsdealership.com">support@carsdealership.com</a></p>
-  </div>
+        <!-- CONTACT FORM REQUIRED -->
+        <section class="contact-form">
+            <h2>Send us a message</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-  <div class="contact-image">
-    <img src="https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?w=500" alt="Cars Dealership Contact Office">  <!-- Optional: real image -->
-  </div>
+        <!-- MAP IMAGE REQUIRED -->
+        <section class="contact-map">
+            <img src="https://via.placeholder.com/800x400/007bff/ffffff?text=Dealership+Locations+Map" 
+                 alt="Dealership Locations Map">
+        </section>
+    </main>
 </body>
 </html>
