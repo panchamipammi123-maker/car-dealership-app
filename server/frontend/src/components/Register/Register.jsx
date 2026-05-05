@@ -1,70 +1,92 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: ""
+    username: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
   });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // Registration logic
   };
 
   return (
     <div className="register-container">
-      <h1>Sign Up</h1>
+      <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        {/* FIELD 1: Username - EXACT TEXT */}
-        <label>Username</label>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          required
-        />
-        
-        {/* FIELD 2: First Name - EXACT TEXT */}
-        <label>First Name</label>  
-        <input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          required
-        />
-        
-        {/* FIELD 3: Last Name - EXACT TEXT */}
-        <label>Last Name</label>
-        <input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          required
-        />
-        
-        {/* FIELD 4: Email - EXACT TEXT */}
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-        
-        {/* FIELD 5: Password - EXACT TEXT */}
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
-        
-        {/* REGISTER BUTTON - EXACT TEXT */}
-        <button type="submit">Register</button>
+        {/* REQUIRED: 5 INPUT FIELDS */}
+        <div className="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            className="form-control"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            className="form-control"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            className="form-control"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="form-control"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            className="form-control"
+            required
+          />
+        </div>
+
+        {/* REQUIRED: Register Button */}
+        <button type="submit" className="btn btn-primary">
+          Register
+        </button>
       </form>
     </div>
   );
