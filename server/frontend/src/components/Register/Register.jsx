@@ -3,8 +3,8 @@ import React, { useState } from "react";
 function Register() {
   const [formData, setFormData] = useState({
     username: "",
-    first_name: "",
-    last_name: "",
+    firstName: "",    // Exact field name
+    lastName: "",     // Exact field name  
     email: "",
     password: "",
   });
@@ -15,7 +15,6 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // call your API: POST /api/register or similar
     console.log("Register data:", formData);
   };
 
@@ -23,42 +22,53 @@ function Register() {
     <div>
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
+        {/* EXACT 5 FIELDS WITH PLACEHOLDERS */}
         <input
           type="text"
           name="username"
-          placeholder="Username"
+          placeholder="Username"      // ← CRITICAL
           value={formData.username}
           onChange={handleChange}
+          required                    // ← CRITICAL
         />
+        
         <input
           type="text"
-          name="first_name"
-          placeholder="First Name"
-          value={formData.first_name}
+          name="firstName"
+          placeholder="First Name"    // ← CRITICAL
+          value={formData.firstName}
           onChange={handleChange}
+          required
         />
+        
         <input
           type="text"
-          name="last_name"
-          placeholder="Last Name"
-          value={formData.last_name}
+          name="lastName"
+          placeholder="Last Name"     // ← CRITICAL
+          value={formData.lastName}
           onChange={handleChange}
+          required
         />
+        
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Email"         // ← CRITICAL
           value={formData.email}
           onChange={handleChange}
+          required
         />
+        
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="Password"      // ← CRITICAL
           value={formData.password}
           onChange={handleChange}
+          required
         />
-        <button type="submit">Register</button>
+        
+        <button type="submit">Register</button>  // ← CRITICAL
       </form>
     </div>
   );
