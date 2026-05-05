@@ -1,19 +1,11 @@
-# Car Dealership Review System
+# xrwm-fullstack_developer_capstone
 
-**IBM Full Stack Software Developer Capstone Project**
+**Repository:** xrwm-fullstack_developer_capstone  
+**Project:** fullstack_developer_capstone
 
-## Repository Details
-- **Repository name**: `car-dealership-app`
-- **Project name**: `Car Dealership Review System`
-- **Student**: Panchami Panchami
-
-## Project Description
-Full-stack Django/React application for national car dealership chain with:
-- Dealer directory (50+ locations)
-- User authentication & reviews  
-- Sentiment analysis API
-- State filtering (Kansas dealers)
-- Responsive UI with React frontend
-
-## Live Deployment
-https://carsdealership-8000.theiadockernext-ab12cd34ef-labs-prod-theiak8s-xy789.proxy.cognitiveclass.ai/
+## Car Dealership Fullstack Application
+Django backend with React frontend
+- Dealer management APIs
+- Review system with sentiment analysis
+- CI/CD GitHub Actions
+- Deployed on Kubernetes
