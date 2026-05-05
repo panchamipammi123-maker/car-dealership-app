@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us - Car Dealership Review System</title>
-    <link rel="stylesheet" href="/static/css/style.css">  <!-- ← FIXED CSS PATH -->
+    <title>Contact Us - Car Dealership</title>
+    <!-- ADD THIS MISSING BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- FIXED NAVBAR - Contact Us ACTIVE -->
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/About.html">About</a></li>
-            <li><a href="/Contact.html" class="active">Contact Us</a></li>  <!-- ← ACTIVE -->
+    <!-- Navigation - CONTACT ACTIVE -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Car Dealership</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/static/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/static/About.html">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/static/Contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h1>Contact Us</h1>
-        
-        <!-- CONTACT DETAILS REQUIRED -->
-        <section class="contact-info">
-            <h2>Headquarters</h2>
-            <p><strong>Address:</strong> 123 Auto Drive, Detroit, MI 48201</p>
-            <p><strong>Phone:</strong> (800) 555-AUTO</p>
-            <p><strong>Email:</strong> info@cardealership.com</p>
-            <p><strong>Hours:</strong> Mon-Fri 9AM-8PM, Sat 10AM-6PM</p>
-        </section>
-
-        <!-- CONTACT FORM REQUIRED -->
-        <section class="contact-form">
-            <h2>Send us a message</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
-        <!-- MAP IMAGE REQUIRED -->
-        <section class="contact-map">
-            <img src="https://via.placeholder.com/800x400/007bff/ffffff?text=Dealership+Locations+Map" 
-                 alt="Dealership Locations Map">
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            
+            <!-- Contact Info -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Visit Us</h4>
+                    <img src="/static/images/dealership.jpg" alt="Dealership Location" class="img-fluid mb-3">
+                    <p><strong>Address:</strong> 123 Auto Drive, Wichita, KS 67201</p>
+                    <p><strong>Phone:</strong> (316) 555-0123</p>
+                    <p><strong>Email:</strong> info@wichitaautodealer.com</p>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <h4>Send Message</h4>
+                    <form>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
