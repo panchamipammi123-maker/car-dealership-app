@@ -1,77 +1,73 @@
 import React, { useState } from "react";
 
-function Register() {
+const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
-    firstName: "",    // Exact field name
-    lastName: "",     // Exact field name  
+    firstName: "",
+    lastName: "",
     email: "",
-    password: "",
+    password: ""
   });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Register data:", formData);
+    console.log(formData);
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
-        {/* EXACT 5 FIELDS WITH PLACEHOLDERS */}
+        {/* FIELD 1: Username - EXACT TEXT */}
+        <label>Username</label>
         <input
           type="text"
           name="username"
-          placeholder="Username"      // ← CRITICAL
-          value={formData.username}
-          onChange={handleChange}
-          required                    // ← CRITICAL
+          placeholder="Username"
+          required
         />
         
+        {/* FIELD 2: First Name - EXACT TEXT */}
+        <label>First Name</label>  
         <input
           type="text"
           name="firstName"
-          placeholder="First Name"    // ← CRITICAL
-          value={formData.firstName}
-          onChange={handleChange}
+          placeholder="First Name"
           required
         />
         
+        {/* FIELD 3: Last Name - EXACT TEXT */}
+        <label>Last Name</label>
         <input
           type="text"
           name="lastName"
-          placeholder="Last Name"     // ← CRITICAL
-          value={formData.lastName}
-          onChange={handleChange}
+          placeholder="Last Name"
           required
         />
         
+        {/* FIELD 4: Email - EXACT TEXT */}
+        <label>Email</label>
         <input
           type="email"
           name="email"
-          placeholder="Email"         // ← CRITICAL
-          value={formData.email}
-          onChange={handleChange}
+          placeholder="Email"
           required
         />
         
+        {/* FIELD 5: Password - EXACT TEXT */}
+        <label>Password</label>
         <input
           type="password"
           name="password"
-          placeholder="Password"      // ← CRITICAL
-          value={formData.password}
-          onChange={handleChange}
+          placeholder="Password"
           required
         />
         
-        <button type="submit">Register</button>  // ← CRITICAL
+        {/* REGISTER BUTTON - EXACT TEXT */}
+        <button type="submit">Register</button>
       </form>
     </div>
   );
-}
+};
 
 export default Register;
